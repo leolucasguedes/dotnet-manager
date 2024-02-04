@@ -1,0 +1,9 @@
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.csproj.AssemblyReference.cache
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.AssemblyInfoInputs.cache
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.AssemblyInfo.cs
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.csproj.CoreCompileInputs.cache
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.RazorAssemblyInfo.cache
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.RazorAssemblyInfo.cs
+C:\Users\Leonardo\Desktop\projetos\dotnet-project\Admin\obj\Debug\net8.0\Admin.sourcelink.json

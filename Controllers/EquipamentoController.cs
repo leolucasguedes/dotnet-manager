@@ -11,7 +11,7 @@ namespace Admin.Controllers
         // GET: /Equipamento/Index
         public IActionResult Index()
         {
-            using (ISession session = EquipamentoContext.OpenSession())
+            using (NHibernate.ISession session = EquipamentoContext.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var equipamentos = session.QueryOver<Equipamento>().List();
@@ -22,7 +22,7 @@ namespace Admin.Controllers
         // GET: /Equipamento/Details/1
         public IActionResult Details(int id)
         {
-            using (ISession session = EquipamentoContext.OpenSession())
+            using (NHibernate.ISession session = EquipamentoContext.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var equipamento = session.Get<Equipamento>(id);
@@ -43,7 +43,7 @@ namespace Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (ISession session = EquipamentoContext.OpenSession())
+                using (NHibernate.ISession session = EquipamentoContext.OpenSession())
                 using (ITransaction transaction = session.BeginTransaction())
                 {
                     equipamento.Aquisicao = DateTime.Now; // Defina a data de aquisição como a data atual
@@ -60,7 +60,7 @@ namespace Admin.Controllers
         // GET: /Equipamento/Edit/1
         public IActionResult Edit(int id)
         {
-            using (ISession session = EquipamentoContext.OpenSession())
+            using (NHibernate.ISession session = EquipamentoContext.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var equipamento = session.Get<Equipamento>(id);
@@ -75,7 +75,7 @@ namespace Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (ISession session = EquipamentoContext.OpenSession())
+                using (NHibernate.ISession session = EquipamentoContext.OpenSession())
                 using (ITransaction transaction = session.BeginTransaction())
                 {
                     var existingEquipamento = session.Get<Equipamento>(id);
@@ -102,7 +102,7 @@ namespace Admin.Controllers
         // GET: /Equipamento/Delete/1
         public IActionResult Delete(int id)
         {
-            using (ISession session = EquipamentoContext.OpenSession())
+            using (NHibernate.ISession session = EquipamentoContext.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var equipamento = session.Get<Equipamento>(id);
@@ -115,7 +115,7 @@ namespace Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            using (ISession session = EquipamentoContext.OpenSession())
+            using (NHibernate.ISession session = EquipamentoContext.OpenSession())
             using (ITransaction transaction = session.BeginTransaction())
             {
                 var equipamento = session.Get<Equipamento>(id);
