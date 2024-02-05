@@ -12,7 +12,7 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/Equipamento/Error");
+    app.UseExceptionHandler("/Hardware/Error");
     app.UseHsts();
 }
 
@@ -23,11 +23,20 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Equipamento}/{action=Index}/{id?}");
-});
+app.MapControllerRoute(
+    name: "hardwareDetails",
+    pattern: "hardware/{id}",
+    defaults: new { controller = "Hardware", action = "Details" }
+);
+
+app.MapControllerRoute(
+    name: "hardwares",
+    pattern: "hardware",
+    defaults: new { controller = "Hardware", action = "Index" }
+);
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Hardware}/{action=Index}/{id?}");
 
 app.Run();

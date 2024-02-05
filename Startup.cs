@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NHibernate;
+using Admin.Context;
 
 namespace Admin
 {
@@ -21,7 +22,8 @@ namespace Admin
             services.AddControllersWithViews();
 
             // Registrar NHibernate.ISession
-            services.AddScoped<NHibernate.ISession>(s => EquipamentoContext.OpenSession());
+            services.AddScoped<NHibernate.ISession>(s => HardwareContext.OpenSession());
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -32,7 +34,7 @@ namespace Admin
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Hardware/Error");
                 app.UseHsts();
             }
 
@@ -47,7 +49,7 @@ namespace Admin
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Equipamento}/{action=Index}/{id?}");
+                    pattern: "{controller=Hardware}/{action=Index}/{id?}");
             });
         }
     }
