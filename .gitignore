@@ -1,0 +1,8 @@
+*.obj
+*.bin
+*.user
+*.dll
+*.exe
+*.pdb
+*.log
+*.vscode

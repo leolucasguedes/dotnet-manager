@@ -1,42 +1,21 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
-// Adicionar serviços ao contêiner.
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
-
-// Configurar o pipeline de solicitação HTTP.
-if (app.Environment.IsDevelopment())
+namespace Admin
 {
-    app.UseDeveloperExceptionPage();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("https://localhost:44300");
+                });
+    }
 }
-else
-{
-    app.UseExceptionHandler("/Hardware/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllerRoute(
-    name: "hardwareDetails",
-    pattern: "hardware/{id}",
-    defaults: new { controller = "Hardware", action = "Details" }
-);
-
-app.MapControllerRoute(
-    name: "hardwares",
-    pattern: "hardware",
-    defaults: new { controller = "Hardware", action = "Index" }
-);
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Hardware}/{action=Index}/{id?}");
-
-app.Run();

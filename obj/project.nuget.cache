@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V94S9p3Ag3c7VaZ4zwLjI7pK7daToTKGe5UU74oUKhnHGpVS/tViMfsjp929+8PitfemmxcvmzrqURZ9uQxJ0g==",
+  "dgSpecHash": "9cFPrSU1unOXM+dJu1r3FHsRstu3a96BlxZ39C1750F+x1w6hOnDngiqgemjlk72LcW3dgtuttwzaJaufj4Vgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\Admin.csproj",
+  "projectFilePath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Leonardo\\.nuget\\packages\\antlr3.runtime\\3.5.1\\antlr3.runtime.3.5.1.nupkg.sha512",
     "C:\\Users\\Leonardo\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",

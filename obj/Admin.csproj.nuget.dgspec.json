@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\Admin.csproj": {}
+    "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\Admin.csproj": {
+    "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\Admin.csproj",
+        "projectUniqueName": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\Admin.csproj",
         "projectName": "Admin",
-        "projectPath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\Admin.csproj",
+        "projectPath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\Admin.csproj",
         "packagesPath": "C:\\Users\\Leonardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-project\\Admin\\obj\\",
+        "outputPath": "C:\\Users\\Leonardo\\Desktop\\projetos\\dotnet-manager_apiTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Leonardo\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -6,7 +6,6 @@ using global::NHibernate;
 
 namespace Admin.Controllers
 {
-    [Area("Hardware")]
     public class HardwareController : Controller
     {
         // GET: /hardware

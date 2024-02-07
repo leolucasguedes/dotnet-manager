@@ -1,5 +1,7 @@
+using System.Net;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -50,6 +52,14 @@ namespace Admin
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Hardware}/{action=Index}/{id?}");
+            });
+        }
+        // Configurações do servidor Kestrel para HTTPS
+        public void ConfigureKestrel(WebHostBuilderContext context, KestrelServerOptions options)
+        {
+            options.Listen(IPAddress.Loopback, 44300, listenOptions =>
+            {
+                listenOptions.UseHttps();
             });
         }
     }
